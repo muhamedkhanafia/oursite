@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Tabs</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .test-item {
+            width: 32%; /* Задает ширину для каждой вкладки, чтобы поместить три в ряд */
+            margin-bottom: 20px;
+        }
+        .pill {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+        }
+        .pill:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .pill-body {
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        h4 {
+            font-size: 1.2em;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://test-english.com/reading/b1/ig-nobel-prizes/" rel="bookmark" title="The Ig Nobel Prizes – B1 English reading test">
+                <img src="https://test-english.com/staging11/wp-content/uploads/B1–Lg-Nobels.png" alt="The Ig Nobel Prizes – B1 English reading test">
+                <div class="pill-body test-item-caption">
+                    <h4>The Ig Nobel Prizes – B1 English reading test</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test2" rel="bookmark" title="Sample Test 2">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 2">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 2</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test3" rel="bookmark" title="Sample Test 3">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 3">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 3</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test4" rel="bookmark" title="Sample Test 4">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 4">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 4</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test5" rel="bookmark" title="Sample Test 5">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 5">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 5</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test6" rel="bookmark" title="Sample Test 6">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 6">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 6</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="test-item">
+        <div class="pill hoverable">
+            <a href="https://example.com/test7" rel="bookmark" title="Sample Test 7">
+                <img src="https://via.placeholder.com/810x450" alt="Sample Test 7">
+                <div class="pill-body test-item-caption">
+                    <h4>Sample Test 7</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

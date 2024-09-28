@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="C:\Users\user\OneDrive\Рабочий стол\мультимедия\style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LINGLY </title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #070307;
+            background-color: white;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #94396b, #8cc08f);
+            color: rgb(252, 252, 246);
+            text-align: center;
+            padding: 30px 45px;
+            position: relative;
+            overflow: hidden;
+        }
+        header h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(205, 189, 15, 0.5);
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            color: rgb(241, 244, 242);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        nav a:hover {
+            border-bottom: 2px solid #9ae8b2;
+        }
+        .hero-button {
+            display: inline-block;
+            background-color: #ca678d;
+            color: #030303;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-button:hover {
+            background-color: #FFC107;
+            color: white;
+        }
+        section {
+            padding: 60px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #b96384;
+            position: relative;
+            padding-bottom: 10px;
+            display: inline-block;
+            border-bottom: 3px solid #b96384;
+        }
+        ..course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Center the items */
+}
+
+.course-list li {
+    background: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(179, 92, 127, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    min-width: 300px; /* Ensure a minimum width for smaller screens */
+}
+
+.course-list li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(176, 87, 123, 0.3);
+}
+
+@media (max-width: 768px) {
+    .course-list li {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .course-list li {
+        flex: 1 1 100%; /* One item per row on small screens */
+        max-width: 100%;
+    }
+}
+
+        }
+        .pricing-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px 0;
+        }
+        .pricing-table h3 {
+            background: #b96384;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .pricing-table ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pricing-table li {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        .pricing-table li:last-child {
+            border-bottom: none;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form button {
+            background-color: #b96384;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #388E3C;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .course-list li {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .course-list li {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <style>
+    img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5cm;
+        margin: 0; 
+        max-width: 5cm; 
+        height: auto; 
+}
+</style>
+</head>
+<body>
+    <center><img src="https://ltdfoto.ru/images/2024/09/25/SNIMOK_EKRANA_2024-09-20_153357-removebg-preview.png" alt="Логотип"border="0"></center>
+            <h1>LING4U</h1>
+            <nav>
+                <a href="#about">About Us</a>
+                <a href="C:\Users\Asus\Desktop\multimedsite\portfolio.html">Portfolio</a>
+                <a href="#courses">Courses</a>
+                <a href="#schedule">Schedule</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeY5NZF1KAXTcLUNKEkc5N4ZyZBYF7x9MUQL2DFkKCYyjVG8A/viewform?usp=sf_link" target="_blank">English Level Test</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a href="#contact" class="hero-button">Get Started</a>
+        </header>
+
+    </header>
+    <style>
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        h2 {
+            text-align: center;
+            color: #b96384;
+            margin: 20px 0; /* Add margin for spacing */
+            position: relative;
+        }
+        .highlights-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto; /* Center the container */
+            padding: 20px; /* Add padding to container */
+        }
+        .highlight-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            position: relative;
+        }
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .highlight-card h3 {
+            margin: 0;
+            color: #b96384;
+        }
+        .highlight-card p {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 10px 0;
+        }
+        ul li {
+            margin: 8px 0;
+            transition: color 0.3s;
+        }
+        ul li:hover {
+            color: #b96384; /* Change color on hover */
+        }
+        @media (max-width: 768px) {
+            .highlight-card {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .highlight-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <style>
+       
+
+        h2 {
+            color: #b14684;
+        }]
+        }
+    </style>
+    <section id="about">
+        <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our English language courses! We offer comprehensive and engaging lessons for learners of all ages and levels. Our team of experienced instructors is committed to helping you achieve fluency and confidence in English.</p>
+
+    <h2>Course Highlights</h2>
+    <div class="highlights-container">
+        <div class="highlight-card">
+            <h3>Tailored Curriculum</h3>
+            <p>Customized learning experiences tailored to individual goals:</p>
+            <ul>
+                <li> - Personalized assessments</li>
+                <li> - Flexible learning paths</li>
+            </ul>
+        </div>
+        <div class="highlight-card">
+            <h3>Experienced Instructors</h3>
+            <p>Qualified teaching staff dedicated to your success:</p>
+            <ul>
+                <li> - Professional development</li>
+                <li> - Continuous support</li>
+            </ul>
+        </div>
+        <div class="highlight-card">
+            <h3>Interactive Learning</h3>
+            <p>Engaging lesson formats that promote active participation:</p>
+            <ul>
+                <li> - Group discussions</li>
+                <li> - Hands-on activities</li>
+            </ul>
+        </div>
+        <div class="highlight-card">
+            <h3>Comprehensive Skill Development</h3>
+            <p>Focus on all language skills: speaking, listening, reading, and writing:</p>
+            <ul>
+                <li> - Integrated practice sessions</li>
+                <li> - Skill-building exercises</li>
+            </ul>
+        </div>
+        <div class="highlight-card">
+            <h3>Cultural Immersion</h3>
+            <p>Learn about English-speaking cultures through engaging content:</p>
+            <ul>
+                <li> - Cultural workshops</li>
+                <li> - Field trips and virtual tours</li>
+            </ul>
+        </div>
+        <div class="highlight-card">
+            <h3>Flexible Scheduling</h3>
+            <p>In-person and online options to fit your lifestyle:</p>
+            <ul>
+                <li> - Evening and weekend classes</li>
+                <li> - Self-paced online modules</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<section id="courses">
+    <h2>Our Courses</h2>
+    <ul class="course-list">
+        <li>
+            <h3>Intermediate Level</h3>
+            <p>For learners with basic knowledge looking to improve their language skills and confidence.</p>
+            <p>.</p>
+            <a href="C:\Users\Asus\Desktop\multimedsite\themes.html" class="enroll-button" style="padding: 10px 20px; background-color: #a23171; color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none;">Enroll Now</a>
+        </li>
+    </ul>
+</section>
+
+
+
+
+    <section id="schedule">
+        <h2>Schedule</h2>
+        <p>Our classes are scheduled as follows:</p>
+        <ul>
+            <li>Monday, Wednesday, Friday - 10:00 - 12:00 </li>
+            <li>Tuesday, Thursday - 15:00 - 17:00 </li>
+        </ul>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-table">
+            <h3>Course Fees</h3>
+            <ul>
+                <li>Beginner Level: $70 per month</li>
+                <li>Intermediate Level: $100 per month</li>
+                <li>Advanced Level: $150 per month</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button
+                   
+
+
+                    <footer class="footer container" role="contentinfo">
+                        <div class="region region-footer">
+                    <section id="block-system-menu-block-footer" class="block block-system block-system-menu-blockmain clearfix">
+                  
+
+    
+                    
+                
+                      
+                      <ul class="menu menu--main nav navbar-nav">
+                                      <li class="first">
+                                                        <a href="/" data-drupal-link-system-path="<front>">Home</a>
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/online-courses" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2910">Online courses <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/online-courses/live-online-classes" data-drupal-link-system-path="taxonomy/term/2884">Live classes</a>
+                              </li>
+                                      <li>
+                                                        <a href="/online-courses/ielts-online-courses" data-drupal-link-system-path="taxonomy/term/2864">IELTS preparation</a>
+                              </li>
+                                      <li>
+                                                        <a href="/online-courses/personal-online-tutoring" data-drupal-link-system-path="taxonomy/term/2870">Personal tutoring</a>
+                              </li>
+                                      <li>
+                                                        <a href="/online-courses/self-study" data-drupal-link-system-path="taxonomy/term/2842">Self-study courses</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/online-courses/learning-style-quiz" data-drupal-link-system-path="taxonomy/term/2990">Learning style quiz</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/learning-hub" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2944">Learning hub <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/learning-hub/topics" data-drupal-link-system-path="taxonomy/term/2989">Topics</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/learning-hub/community-events" data-drupal-link-system-path="taxonomy/term/2891">Community events</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/skills" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2740">Skills <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/skills/listening" data-drupal-link-system-path="taxonomy/term/2345">Listening</a>
+                              </li>
+                                      <li>
+                                                        <a href="/skills/reading" data-drupal-link-system-path="taxonomy/term/2741">Reading</a>
+                              </li>
+                                      <li>
+                                                        <a href="/skills/writing" data-drupal-link-system-path="taxonomy/term/2386">Writing</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/skills/speaking" data-drupal-link-system-path="taxonomy/term/2802">Speaking</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/grammar" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2383">Grammar <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/grammar/a1-a2-grammar" data-drupal-link-system-path="taxonomy/term/2769">A1-A2 grammar</a>
+                              </li>
+                                      <li>
+                                                        <a href="/grammar/b1-b2-grammar" data-drupal-link-system-path="taxonomy/term/2941">B1-B2 grammar</a>
+                              </li>
+                                      <li>
+                                                        <a href="/grammar/c1-grammar" data-drupal-link-system-path="taxonomy/term/2988">C1 grammar</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/grammar/english-grammar-reference" data-drupal-link-system-path="taxonomy/term/2942">English grammar reference</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/vocabulary" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2766">Vocabulary <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/vocabulary/a1-a2-vocabulary" data-drupal-link-system-path="taxonomy/term/2767">A1-A2 vocabulary</a>
+                              </li>
+                                      <li>
+                                                        <a href="/vocabulary/b1-b2-vocabulary" data-drupal-link-system-path="taxonomy/term/2768">B1-B2 vocabulary</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/vocabulary/vocabulary-games" data-drupal-link-system-path="taxonomy/term/2395">Vocabulary games</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/business-english" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2385">Business English <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/corporate-solutions" data-drupal-link-system-path="taxonomy/term/2928">Corporate training and assessments</a>
+                              </li>
+                                      <li>
+                                                        <a href="/business-english/business-magazine" data-drupal-link-system-path="taxonomy/term/2391">Business magazine</a>
+                              </li>
+                                      <li>
+                                                        <a href="/business-english/podcasts-professionals" data-drupal-link-system-path="taxonomy/term/2390">Podcasts for professionals</a>
+                              </li>
+                                      <li>
+                                                        <a href="/business-english/english-emails" data-drupal-link-system-path="taxonomy/term/2554">English for emails</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/business-english/youre-hired" data-drupal-link-system-path="taxonomy/term/2389">You're Hired</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown">
+                                                                                    <a href="/general-english" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2384">General English <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/general-english/video-zone" data-drupal-link-system-path="taxonomy/term/2742">Video zone</a>
+                              </li>
+                                      <li>
+                                                        <a href="/general-english/audio-zone" data-drupal-link-system-path="taxonomy/term/2400">Audio zone</a>
+                              </li>
+                                      <li>
+                                                        <a href="/general-english/magazine-zone" data-drupal-link-system-path="taxonomy/term/2398">Magazine zone</a>
+                              </li>
+                                      <li>
+                                                        <a href="/general-english/story-zone" data-drupal-link-system-path="taxonomy/term/2399">Story zone</a>
+                              </li>
+                                      <li>
+                                                        <a href="/general-english/audio-series" data-drupal-link-system-path="taxonomy/term/2913">Audio series</a>
+                              </li>
+                                      <li>
+                                                        <a href="/general-english/video-series" data-drupal-link-system-path="taxonomy/term/2914">Video series</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/apps" data-drupal-link-system-path="taxonomy/term/2388">Apps</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                                      <li class="expanded dropdown last">
+                                                                                    <a href="/english-levels" class="dropdown-toggle" data-drupal-link-system-path="taxonomy/term/2931">English levels <span class="caret"></span></a>
+                                        <ul class="dropdown-footer-menu">
+                                      <li class="first">
+                                                        <a href="/english-levels/online-english-level-test" data-drupal-link-system-path="taxonomy/term/2932">Online English level test</a>
+                              </li>
+                                      <li>
+                                                        <a href="/english-levels/understand-your-english-level" data-drupal-link-system-path="taxonomy/term/2946">Understand your English level</a>
+                              </li>
+                                      <li>
+                                                        <a href="/english-levels/improve-your-english-level" data-drupal-link-system-path="taxonomy/term/2939">Improve your English level</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/english-levels/find-resources-your-level" data-drupal-link-system-path="taxonomy/term/2945">Find resources for your level</a>
+                              </li>
+                        </ul>
+                  
+                              </li>
+                        </ul>
+                  
+                
+                  </section>
+                
+                <section id="block-block-group-bottom-block" class="block block-blockgroup block-block-groupbottom-block clearfix">
+                  
+                    
+                
+                      <section id="block-bottomcenterleft" class="block block-blockgroup block-block-groupbottom-center-left clearfix">
+                  
+                    
+                
+                      <section id="block-iconfooter" class="block block-fixed-block-content block-fixed-block-contenticon-footer clearfix">
+                  
+                    
+                
+                      
+                <div class="wrapper-title-course">
+                      
+                <div class="wrapper-image-course">
+                      
+                            <div class="field field--name-field-course-offerd-by-image field--type-image field--label-hidden field--item">  <img loading="lazy" src="/sites/podcasts/files/styles/medium/public/2023-10/Full_6.png?itok=ygd5QV5m" width="100" height="29" alt="Icon Footer" class="img-responsive">
+                
+                
+                </div>
+                      
+                            <div class="field field--name-field-course-offerd-by-title-aft field--type-string field--label-hidden field--item">Learning English</div>
+                      
+                  </div>
+                
+                  </div>
+                
+                  </section>
+                
+                <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
+                            
+                  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+                  
+                
+                        
+                      <ul class="menu menu--footer nav">
+                                      <li class="first">
+                                                        <a href="/about-us" data-drupal-link-system-path="node/11406">About us</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://www.britishcouncil.org/terms">Terms of use</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://www.britishcouncil.org/accessibility">Accessibility</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://www.britishcouncil.org/privacy-cookies">Privacy and cookies</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://englishonline.britishcouncil.org/affiliate-marketing-programme/?country=le">Affiliate programme</a>
+                              </li>
+                                      <li>
+                                                        <a href="/getting-started" data-drupal-link-system-path="node/23">Getting started</a>
+                              </li>
+                                      <li>
+                                                        <a href="/frequently-asked-questions" data-drupal-link-system-path="node/1595">Frequently asked questions</a>
+                              </li>
+                                      <li class="active active-trail">
+                                                        <a href="/contact-us" class="active-trail is-active" data-drupal-link-system-path="node/51">Contact us</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="/sitemap" data-drupal-link-system-path="sitemap">Site map</a>
+                              </li>
+                        </ul>
+                  
+                
+                  </nav>
+                <section id="block-pagebottomcopyrightlivechecked022017" class="block block-block-content block-block-contentd5560cdb-b58a-4708-ab76-301979ac1f78 clearfix">
+                  
+                    
+                
+                      
+                            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p><strong>© British Council</strong><br>
+                The United Kingdom's international organisation for cultural relations and educational opportunities.<br>
+                A registered charity: 209131 (England and Wales) SC037733 (Scotland).<br>
+                </p></div>
+                      
+                  </section>
+                
+                
+                  </section>
+                
+                <section id="block-bottomcenterright" class="block block-blockgroup block-block-groupbottom-center-right clearfix">
+                  
+                    
+                
+                      <nav role="navigation" aria-labelledby="block-followus-menu" id="block-followus">
+                            
+                  <h2 class="visually-hidden" id="block-followus-menu">Follow us</h2>
+                  
+                
+                        
+                      <ul class="menu menu--menu-follow-us nav">
+                                      <li class="first">
+                                                        <a href="https://www.tiktok.com/@britishcouncilenglish" class="icon-tiktok" target="_blank">TikTok</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://www.instagram.com/britishcouncilenglishonline/" class="icon-instagram" target="_blank">Instagram</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://youtube.com/@BritishCouncilEnglish" class="icon-youtube" target="_blank">YouTube</a>
+                              </li>
+                                      <li>
+                                                        <a href="https://www.facebook.com/LearnEnglish.BritishCouncil" class="icon-facebook" target="_blank">Facebook</a>
+                              </li>
+                                      <li class="last">
+                                                        <a href="http://twitter.com/LearnEnglish_BC" class="icon-twitter" target="_blank">Twitter</a>
+                              </li>
+                        </ul>
+                  
+                
+                  </nav>
+                
+                  </section>
+                
+                
+                  </section>
+                
+                
+                  </div>
+                
+                    </footer>
